@@ -9,6 +9,7 @@ export interface BlogPost {
   date: string; // formato: YYYY-MM-DD
   tags: string[];
   readTime: string;
+  imageUrl?: string; // URL da imagem (opcional)
 }
 
 // Posts de exemplo - você pode substituir ou adicionar novos posts gerados pelo R
@@ -21,7 +22,8 @@ export const posts: BlogPost[] = [
     author: "João Silva",
     date: "2024-03-15",
     tags: ["Ações", "Mercado", "Análise"],
-    readTime: "5 min"
+    readTime: "5 min",
+    imageUrl: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=400&fit=crop"
   },
   {
     id: "2",
@@ -41,7 +43,8 @@ export const posts: BlogPost[] = [
     author: "Carlos Oliveira",
     date: "2024-03-05",
     tags: ["FII", "Imobiliário", "Iniciantes"],
-    readTime: "10 min"
+    readTime: "10 min",
+    imageUrl: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=400&fit=crop"
   },
   {
     id: "4",
@@ -61,7 +64,8 @@ export const posts: BlogPost[] = [
     author: "Pedro Lima",
     date: "2024-02-20",
     tags: ["Cripto", "Bitcoin", "Blockchain"],
-    readTime: "8 min"
+    readTime: "8 min",
+    imageUrl: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&h=400&fit=crop"
   },
   {
     id: "6",
