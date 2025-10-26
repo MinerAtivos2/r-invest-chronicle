@@ -2,6 +2,8 @@
 
 Este blog foi estruturado para facilitar a adição de novos posts gerados pelo R.
 
+**📖 Para instruções detalhadas e scripts completos, veja: [GUIA_POSTS_R.md](GUIA_POSTS_R.md)**
+
 ## Estrutura de um Post
 
 Cada post deve seguir esta estrutura TypeScript em `src/data/posts.ts`:

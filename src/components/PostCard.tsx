@@ -2,12 +2,15 @@ import { Calendar, Clock, Tag } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BlogPost } from "@/data/posts";
+import { useNavigate } from "react-router-dom";
 
 interface PostCardProps {
   post: BlogPost;
 }
 
 export const PostCard = ({ post }: PostCardProps) => {
+  const navigate = useNavigate();
+
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString("pt-BR", {
@@ -18,7 +21,10 @@ export const PostCard = ({ post }: PostCardProps) => {
   };
 
   return (
-    <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary cursor-pointer h-full flex flex-col">
+    <Card 
+      onClick={() => navigate(`/post/${post.id}`)}
+      className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary cursor-pointer h-full flex flex-col"
+    >
       <CardHeader>
         <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
           <Calendar className="h-4 w-4" />
