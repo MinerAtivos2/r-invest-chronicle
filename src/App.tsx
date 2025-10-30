@@ -14,7 +14,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename={import.meta.env.MODE === "production" ? "/r-invest-chronicle" : ""}>
+      <BrowserRouter basename={import.meta.env.MODE === "production" ? "/blog2" : ""}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/post/:id" element={<Post />} />
